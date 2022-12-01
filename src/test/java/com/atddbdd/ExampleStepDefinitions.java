@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
-import java.util.function.Supplier;
+
 
 import static com.atddbdd.StepDefinitionHelpers.setUseFieldFromEntryMap;
 import static org.junit.Assert.assertArrayEquals;
@@ -17,6 +17,7 @@ import static org.junit.Assert.assertArrayEquals;
 
 
 class ExampleTable {
+
     public String name1;
     public String name2;
 
@@ -55,6 +56,7 @@ class ExampleTableUsedFields {
     }
 }
 public class ExampleStepDefinitions {
+
     ExampleTableUsedFields exampleTableUsedFields;
     TableHelper<ExampleTable> tableHelperExampleTable =
             new TableHelper<ExampleTable>(ExampleTable::new);
@@ -98,7 +100,8 @@ public class ExampleStepDefinitions {
     }
 
     @Then("data matches")
-    public void data_matches(List<ExampleTable> dataTable) throws IOException {
+    public void data_matches(List<ExampleTable> dataTable)
+        {
         System.out.println(" Expected ");
         for (ExampleTable exampleTable : dataTable) {
             System.out.println(exampleTable.toString());

@@ -6,7 +6,6 @@ import io.cucumber.java.en.Given;
 import java.util.List;
 import java.util.Map;
 
-import static com.atddbdd.StepDefinitionHelpers.setUseFieldFromEntryMap;
 class MyClass {
     String value;
     public MyClass(String value)
@@ -33,6 +32,7 @@ class TypedTable {
     }
 }
 public class ExampleTypedFieldStepDefinitions {
+
 
     @Given("typed table is")
     public void typed_table_is(List<TypedTable> dataTable) {

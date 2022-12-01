@@ -1,7 +1,6 @@
 package com.atddbdd;
 
 import com.csvreader.CsvReader;
-import io.cucumber.java.DataTableType;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,11 +9,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Supplier;
 
-import static com.atddbdd.StepDefinitionHelpers.setUseFieldFromEntryMap;
 
 public class TableHelper <T> {
 
         private Supplier<T> supplier;
+
 
         TableHelper(Supplier<T> supplier) {
             this.supplier = supplier;
